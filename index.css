@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body{
+    background-image: url('images/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar{
+    background: rgb(0, 0, 0);
+    height: 50px;
+    position: sticky;
+    top: 0;
+}
+
+.logo{
+    height: 36px;
+    margin: 5px 10px;
+    display: inline-block;
+}
+
+.links{
+    float: right;
+    margin-right: 40px;
+    cursor: default;
+}
+
+.links a{
+    display: inline-block;
+    line-height: 50px; 
+    margin: 0 10px;
+}
+
+.home,.st,.tp,.pp,.au{
+    position: relative;
+}
+
+.home:before{
+    content: "";
+    position: absolute;
+    bottom: 13px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(1);
+    background-color: lime;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.st:before,.tp:before,.pp:before,.au:before{
+    content: "";
+    position: absolute;
+    bottom: 13px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: lime;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.home:hover:before,.st:hover:before,.tp:hover:before,.pp:hover:before,.au:hover:before{
+    transform: scaleX(1);
+}
+
+#check{
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    right: 0;
+    margin: 0 15px;
+    line-height: 50px;
+
+}
+
+@media (max-width: 768px) {
+    .icons{
+        display: inline-block;
+    }
+
+    .icons #close{
+        display: none;
+    }
+
+    #check:checked ~ .icons #menu{
+        display: none;
+    }
+
+    #check:checked ~ .icons #close{
+        display: inline-block;
+    }
+
+    .links{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s ease;
+    }
+
+    #check:checked ~ .links{
+        height: 100vh;
+    }
+
+    .links a{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0px;
+        line-height: 60px;
+    }
+
+    .home:before,.st:before,.tp:before,.pp:before,.au:before{
+        display: none;
+    }
+}
+
+/* Navbar Completed */
