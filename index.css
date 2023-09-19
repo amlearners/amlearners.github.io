@@ -1,11 +1,11 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 body{
-    background-image: url('images/background.png');
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url('images/background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -26,8 +26,10 @@ a{
 }
 
 .logo{
-    height: 40px;
-    margin: 5px 0px;
+    height: 36px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    margin-left: 10px;
     display: inline-block;
 }
 
@@ -91,7 +93,7 @@ a{
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .icons{
         display: inline-block;
     }
@@ -140,3 +142,82 @@ a{
 }
 
 /* Navbar Completed */
+
+main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    width: 1200px;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.start{
+    font-size: 25px;
+    font-weight: 1000;
+    color: aqua;
+}
+
+.AM{
+    font-size: 60px;
+    color: aqua;
+}
+
+@media (max-width: 800px) {
+    .start{
+        font-size: 20px;
+    }
+    
+    .AM{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .start{
+        font-size: 15px;
+    }
+    
+    .AM{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .text{
+        display: grid;
+        align-self: center;
+    }
+
+    .start{
+        font-size: 15px;
+    }
+    
+    .AM{
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 250px) {
+    .text{
+        display: grid;
+        align-self: center;
+    }
+
+    .start{
+        font-size: 12px;
+    }
+    
+    .AM{
+        font-size: 24px;
+    }
+}
