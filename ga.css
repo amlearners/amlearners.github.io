@@ -231,3 +231,35 @@ input[type=button]:hover{
     background-color: rgb(0, 200, 200);
     transition: 0.2s;
 }
+
+@media (max-width: 575px) {
+    .form{
+        width: 360px;
+        height: 450px;
+        padding: 45px;
+    }
+}
+
+@media (max-width: 500px) {
+    .form{
+        width: 320px;
+        height: 450px;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    .form{
+        width: 300px;
+        height: 450px;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+    .form{
+        width: 280px;
+        height: 480px;
+        padding: 35px;
+    }
+}
