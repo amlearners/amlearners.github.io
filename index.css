@@ -160,12 +160,13 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     width: 100%;
     margin: 15px 0;
     cursor: default;
 }
 
-.start{
+.quote{
     font-size: 25px;
     font-weight: 1000;
     color: aqua;
@@ -238,7 +239,7 @@ main{
 }
 
 @media (max-width: 800px) {
-    .start{
+    .quote{
         font-size: 20px;
     }
     
@@ -248,7 +249,7 @@ main{
 }
 
 @media (max-width: 500px) {
-    .start{
+    .quote{
         font-size: 15px;
     }
     
@@ -263,7 +264,7 @@ main{
         align-self: center;
     }
 
-    .start{
+    .quote{
         font-size: 15px;
     }
     
@@ -278,7 +279,7 @@ main{
         align-self: center;
     }
 
-    .start{
+    .quote{
         font-size: 12px;
     }
     
