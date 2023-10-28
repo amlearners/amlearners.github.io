@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url('images/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/*Navbar Start*/
+
+.navbar{
+    background: rgb(0, 0, 0);
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.logo{
+    height: 36px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.links{
+    float: right;
+    margin-right: 40px;
+    cursor: default;
+}
+
+.links a{
+    display: inline-block;
+    line-height: 50px; 
+    margin: 0 10px;
+}
+
+.home,.ga,.ab{
+    position: relative;
+}
+
+.home:before{
+    content: "";
+    position: absolute;
+    bottom: 13px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(1);
+    background-color: lime;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.ga:before,.ab:before{
+    content: "";
+    position: absolute;
+    bottom: 13px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: lime;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.home:hover:before,.ab:hover:before,.ga:hover:before{
+    transform: scaleX(1);
+}
+
+#check{
+    display: none;
+}
+
+.icons{
+    position: absolute;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    display: none;
+    right: 0;
+    margin: 0 15px;
+    line-height: 50px;
+
+}
+
+@media (max-width: 800px) {
+    .icons{
+        display: inline-block;
+    }
+
+    .icons #close{
+        display: none;
+    }
+
+    #check:checked ~ .icons #menu{
+        display: none;
+    }
+
+    #check:checked ~ .icons #close{
+        display: inline-block;
+    }
+
+    .links{
+        position: relative;
+        width: 100%;
+        right: -40px;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s ease;
+    }
+
+    #check:checked ~ .links{
+        height: 200px;
+    }
+
+    .links a{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0px;
+        line-height: 60px;
+    }
+
+    .home:before,.ga:before,.ab:before{
+        display: none;
+    }
+}
+
+/* Navbar Completed */
+
+main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.main{
+    width: 1200px;
+}
+
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 15px 0;
+    cursor: default;
+}
+
+.quote{
+    font-size: 25px;
+    font-weight: 1000;
+    color: aqua;
+}
+
+.AM{
+    font-size: 60px;
+    color: aqua;
+}
+
+.cardholder{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.cards{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 5px 10px black;
+    margin: 10px;
+    transition: 0.2s;
+    cursor: default;
+}
+
+.cards:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.2s;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.heading{
+    position: absolute;
+    height: 38px;
+    font-size: 30px;
+    top: 30px;
+}
+
+.subs{
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+.subs p{
+    margin: 10px 0;
+}
+
+.subs p a{
+    font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    .quote{
+        font-size: 20px;
+    }
+    
+    .AM{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .quote{
+        font-size: 15px;
+    }
+    
+    .AM{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .text{
+        display: grid;
+        align-self: center;
+    }
+
+    .quote{
+        font-size: 15px;
+    }
+    
+    .AM{
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 250px) {
+    .text{
+        display: grid;
+        align-self: center;
+    }
+
+    .quote{
+        font-size: 12px;
+    }
+    
+    .AM{
+        font-size: 24px;
+    }
+}
