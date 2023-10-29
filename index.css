@@ -197,6 +197,7 @@ main{
   padding: 50px;
   margin: 20px;
   word-wrap:break-word;
+  display: inline-block;
 
 }
 
