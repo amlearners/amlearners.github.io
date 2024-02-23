@@ -49,20 +49,30 @@ a{
 /*Navbar Start*/
 
 .navbar{
-    background-color: #1d1e1f;
+    background: linear-gradient(to right, rgba(30, 30, 30, 0.8), rgba(29, 30, 31, 1));
     height: 50px;
     width: 90%;
     padding: 5px;
     position: sticky;
+    top: 0;
+    top: 15px;
     border-radius: 50px;
-    margin-top: 25px;
+    margin-top: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
     z-index: 5;
     backdrop-filter: blur(25px);
 }
 
+.stick{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo{
     height: 50px;
-    display: inline-block;
+    display: inline-flex;
     float: left;
     border-radius: 50px;
     cursor: pointer;
@@ -75,7 +85,7 @@ a{
 }
 
 .links a{
-    display: inline-block;
+    display: inline-flex;
     line-height: 50px; 
     margin: 0 15px;
     font-weight: 900;
@@ -142,7 +152,7 @@ a{
         background-color: rgba(29, 30, 31, 0.5);
         backdrop-filter: blur(15px);
         height: 0px;
-        margin-top: 75px;
+        margin-top: 65px;
         overflow: hidden;
         transition: 0.5s ease;
     }
