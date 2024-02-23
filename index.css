@@ -1,16 +1,22 @@
 *{
     margin: 0;
     padding: 0;
+    color: white;
     font-family: 'Quicksand', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{
-    background-image: linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)), url('images/background.png');
+    background-image: url('images/backgroundpng');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    background-color: black;
+    background-color: #141414;
+    height: 200vh;
 }
 
 a{
@@ -18,66 +24,74 @@ a{
     text-decoration: none;
 }
 
+/*Quote Section Start*/
+
+.announcement{
+    font-size: 18px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #141414;
+}
+
+.announcement p{
+    cursor: default;
+    display: inline;
+}
+
+.hl{
+    color: aqua;
+}
+
+/*Quote Section Finish*/
 /*Navbar Start*/
 
 .navbar{
-    background: rgb(0, 0, 0);
+    background-color: #1d1e1f;
     height: 50px;
+    width: 90%;
+    padding: 5px;
     position: sticky;
-    top: 0;
+    border-radius: 50px;
+    margin-top: 25px;
     z-index: 5;
+    backdrop-filter: blur(25px);
 }
 
 .logo{
-    height: 36px;
-    margin-top: 6px;
-    margin-bottom: 4px;
-    margin-left: 10px;
+    height: 50px;
     display: inline-block;
+    float: left;
+    border-radius: 50px;
+    cursor: pointer;
 }
 
 .links{
     float: right;
-    margin-right: 40px;
+    margin-right: 10px;
     cursor: default;
 }
 
 .links a{
     display: inline-block;
     line-height: 50px; 
-    margin: 0 10px;
+    margin: 0 15px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.5);
+    transition-duration: 0.35s;
+    font-size: 15px;
+    cursor: pointer;
 }
 
-.home,.ga,.ab{
+.links a:hover{
+    color: rgba(255, 255, 255, 1);
+    transition-duration: 0.35s
+}
+
+.home,.ta,.ab{
     position: relative;
-}
-
-.home:before{
-    content: "";
-    position: absolute;
-    bottom: 13px;
-    height: 2px;
-    width: 100%;
-    transform: scaleX(1);
-    background-color: lime;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 15px;
-}
-
-.ga:before,.ab:before{
-    content: "";
-    position: absolute;
-    bottom: 13px;
-    height: 2px;
-    width: 100%;
-    transform: scaleX(0);
-    background-color: lime;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 15px;
-}
-
-.home:hover:before,.ab:hover:before,.ga:hover:before{
-    transform: scaleX(1);
 }
 
 #check{
@@ -93,16 +107,24 @@ a{
     right: 0;
     margin: 0 15px;
     line-height: 50px;
-
 }
 
 @media (max-width: 800px) {
+    
+    .announcement{
+        font-size: 16px;
+    }
+
     .icons{
         display: inline-block;
     }
 
     .icons #close{
         display: none;
+    }
+
+    .icons #close, .icons #menu{
+        margin-right: 10px;
     }
 
     #check:checked ~ .icons #menu{
@@ -115,17 +137,18 @@ a{
 
     .links{
         position: relative;
-        width: 100%;
-        right: -40px;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(10px);
+        width: 150px;
+        border-radius: 15px;
+        background-color: rgba(29, 30, 31, 0.5);
+        backdrop-filter: blur(15px);
         height: 0px;
+        margin-top: 75px;
         overflow: hidden;
         transition: 0.5s ease;
     }
 
     #check:checked ~ .links{
-        height: 200px;
+        height: 160px;
     }
 
     .links a{
@@ -135,114 +158,53 @@ a{
         align-items: center;
         padding: 0;
         margin: 0px;
-        line-height: 60px;
+        line-height: 50px;
     }
 
-    .home:before,.ga:before,.ab:before{
+    .home:before,.ta:before,.ab:before{
         display: none;
     }
 }
 
-/* Navbar Completed */
 
-main{
-    width: 100vw;
+/*Navbar Finish*/
+
+/*
+.navbar{
+    margin-top: 25px;
+    position: sticky;
+    top: 25;
+    background-color: #1d1e1f;
+    width: 1070px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50px;
     display: flex;
-    justify-content: center;
-    padding-bottom: 50px;
+    line-height: 50px;
 }
 
-.text{
+.logo{
+    height: 50px;
+    border-radius: 50px;
+    display: block;
+    background-color: #1d1e1f;
+}
+
+.direct{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    margin: 15px 0;
+    float: right;
+}
+
+.direct a{
+    color: rgba(255, 255, 255, 0.5);
+    transition-duration: 0.35s;
+    font-size: 15px;
+    margin: 0px 15px;
     cursor: default;
+    font-weight: 900;
 }
 
-.quote{
-    font-size: 25px;
-    font-weight: 1000;
-    color: aqua;
-}
-
-.AM{
-    font-size: 60px;
-}
-
-.holder{
-    width: 100vw;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cardholder{
-    width: 1200px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    color: white;
-}
-
-.cards{
-    position: relative;
-    width: 350px;
-    height: 350px;
-    background-color: rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0px 5px 10px black;
-    margin: 10px;
-    transition: 0.2s;
-    cursor: default;
-}
-
-.cards:hover{
-    background-color: rgba(0, 0, 0, 0.4);
-    transition: 0.2s;
-}
-
-.content{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-}
-
-.heading{
-    position: absolute;
-    height: 38px;
-    font-size: 30px;
-    top: 30px;
-}
-
-.subs{
-    margin-top: 50px;
-    text-align: center;
-}
-
-
-.subs p{
-    margin: 10px 0;
-}
-
-.subs p a{
-    font-size: 20px;
-}
-
-@media (max-width: 800px) {
-    .quote{
-        font-size: 20px;
-    }
+.direct a b:hover{
+    color: rgba(255, 255, 255, 1);
+    transition-duration: 0.35s
 }
