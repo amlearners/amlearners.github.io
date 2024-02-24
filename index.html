@@ -17,7 +17,7 @@
 <body>
 
     <div class="announcement">
-        <b><p>"<p class="hl">Patience and Consistency</p> is the Key to Success"</p></b>
+        <center><b><p>"<p class="hl">Patience and Consistency</p> is the Key to Success"</p></b></center>
     </div>
     <hr>
     <div class="navbar" dir="ltr">
@@ -35,7 +35,62 @@
     </div>
 
     <main>
+
+        <section></section>
+
+        <section></section>
+
+        <section class="formhld">
+            <div class="form">
+                <h1 class="formh">Advice Form</h1>
+
+                <span><label for="name" class="l1">Full Name</label></span>
+                <input type="text" id="name" placeholder="Enter Full Name" required>
+
+                <span><label for="email">Email Address <b id="get">( You will receive the advice on this Email )</b></label></span>
+                <input type="email" id="email" placeholder="Enter Email Address" required>
+
+                <span><label for="subject">Reason for Taking Advice</label></span>
+                <input type="text" id="subject" placeholder="e.g, Can't Leave Social Media" required>
+
+                <span><label for="detail">Explain in Detail</label></span>
+                <textarea name="detail" id="detail" placeholder="Explain About Your Problem in Detail" required></textarea>
+                <input type="button" value="Get Advice" onclick="submit()">
+            </div>
+        </section>
+
     </main>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+
+        function submit(){
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+            var detail = document.getElementById("detail").value;
+
+            var body = "Email: " + email + "<br/> <br/> Subject: " + subject + "<br/> <br/> Problem: " + detail;
+
+            Email.send({
+                SecureToken : "bada7894-7b2d-43d9-a299-e812bee69e78",
+                To : 'amlearners108@gmail.com',
+                From : "amlearners108@gmail.com",
+                Subject : name,
+                Body : body
+            })
+            
+            .then(
+                message =>{
+                    if(message=='OK'){
+                        swal("Successfull !", "We Will Get You Adviced Soon Anytime.", "success");
+                    }
+                }
+            );
+        }
+
+    </script>
 
 </body>
 </html>
