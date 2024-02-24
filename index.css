@@ -299,6 +299,7 @@ input[type=button]:hover{
 
     .formhld{
         max-width: 90%;
+        margin-top: 10px;
         align-items: center;
         justify-content: center;
         flex-direction: column;
