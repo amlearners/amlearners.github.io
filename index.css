@@ -141,7 +141,7 @@ a{
     }
 
     .icons #close, .icons #menu{
-        margin-right: 0px;
+        margin: 0px;
     }
 
     #check:checked ~ .icons #menu{
@@ -187,7 +187,7 @@ a{
 /*Navbar Finish*/
 
 main{
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
@@ -198,16 +198,28 @@ main{
 .formhld{
     width: 90%;
     max-width: 1080px;
+    margin-top: 25px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+}
+
+.former{
+    width: 50%;
+}
+
+.adtext{
+    width: 50%;
+    text-align: justify;
+}
+
+.adtext p{
+    font-size: 17px;
+    padding-right: 25px;
 }
 
 .form{
-    width: 400px;
     height: 450px; 
     background: rgba(10, 10, 10, 0.75);
-    margin-top: 50px;
     border-radius: 10px;
     backdrop-filter: blur(25px);
     display: flex;
@@ -280,9 +292,31 @@ input[type=button]:hover{
     transition: 0.2s;
 }
 
+@media (max-width: 768px) {
+    .former{
+        width: 90%;
+    }
+
+    .formhld{
+        max-width: 90%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .adtext{
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .adtext p{
+        font-size: 16px;
+        padding-right: 0px;
+    }
+}
+
 @media (max-width: 575px) {
     .form{
-        width: 360px;
         height: 450px;
         padding: 45px;
     }
@@ -290,7 +324,6 @@ input[type=button]:hover{
 
 @media (max-width: 500px) {
     .form{
-        width: 320px;
         height: 450px;
         padding: 40px;
     }
@@ -298,15 +331,13 @@ input[type=button]:hover{
 
 @media (max-width: 450px) {
     .form{
-        width: 300px;
         height: 450px;
         padding: 40px;
     }
 }
 
 @media (max-width: 420px) {
-    .form{
-        width: 280px;
+    .form{  
         height: 480px;
         padding: 35px;
     }
