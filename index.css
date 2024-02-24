@@ -49,8 +49,8 @@ a{
 /*Navbar Start*/
 
 .navbar{
-    background: linear-gradient(to right, rgba(30, 30, 30, 0.8), rgba(29, 30, 31, 1));
-    height: 50px;
+    background: linear-gradient(to right, rgba(50, 50, 50, 0.7), rgba(40, 40, 40, 0.8));
+    height: 40px;
     width: 90%;
     padding: 5px;
     position: sticky;
@@ -71,7 +71,7 @@ a{
 }
 
 .logo{
-    height: 50px;
+    height: 40px;
     display: inline-flex;
     float: left;
     border-radius: 50px;
@@ -86,7 +86,7 @@ a{
 
 .links a{
     display: inline-flex;
-    line-height: 50px; 
+    line-height: 40px; 
     margin: 0 15px;
     font-weight: 900;
     color: rgba(255, 255, 255, 0.5);
@@ -110,13 +110,15 @@ a{
 
 .icons{
     position: absolute;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
+    background-color: rgba(50, 50, 50, 0.7);
     cursor: pointer;
     display: none;
+    border-radius: 50px;
     right: 0;
     margin: 0 15px;
-    line-height: 50px;
+    line-height: 40px;
 }
 
 @media (max-width: 800px) {
@@ -126,7 +128,11 @@ a{
     }
 
     .icons{
-        display: inline-block;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
     }
 
     .icons #close{
@@ -134,7 +140,7 @@ a{
     }
 
     .icons #close, .icons #menu{
-        margin-right: 10px;
+        margin-right: 0px;
     }
 
     #check:checked ~ .icons #menu{
@@ -149,10 +155,10 @@ a{
         position: relative;
         width: 150px;
         border-radius: 15px;
-        background-color: rgba(29, 30, 31, 0.5);
+        background-color: rgba(45, 45, 45, 0.6);
         backdrop-filter: blur(15px);
         height: 0px;
-        margin-top: 65px;
+        margin-top: 60px;
         overflow: hidden;
         transition: 0.5s ease;
     }
@@ -174,47 +180,4 @@ a{
     .home:before,.ta:before,.ab:before{
         display: none;
     }
-}
-
-
-/*Navbar Finish*/
-
-/*
-.navbar{
-    margin-top: 25px;
-    position: sticky;
-    top: 25;
-    background-color: #1d1e1f;
-    width: 1070px;
-    height: 50px;
-    padding: 5px;
-    border-radius: 50px;
-    display: flex;
-    line-height: 50px;
-}
-
-.logo{
-    height: 50px;
-    border-radius: 50px;
-    display: block;
-    background-color: #1d1e1f;
-}
-
-.direct{
-    display: flex;
-    float: right;
-}
-
-.direct a{
-    color: rgba(255, 255, 255, 0.5);
-    transition-duration: 0.35s;
-    font-size: 15px;
-    margin: 0px 15px;
-    cursor: default;
-    font-weight: 900;
-}
-
-.direct a b:hover{
-    color: rgba(255, 255, 255, 1);
-    transition-duration: 0.35s
 }
