@@ -153,13 +153,14 @@ a{
     }
 
     .links{
-        position: relative;
+        position: absolute;
         z-index: 10;
         width: 150px;
         border-radius: 15px;
-        background-color: rgba(45, 45, 45, 0.85);
+        background-color: rgba(45, 45, 45, 0.8);
         height: 0px;
-        margin-top: 60px;
+        right: 0;
+        margin-top: 50px;
         overflow: hidden;
         transition: 0.5s ease;
     }
@@ -173,8 +174,8 @@ a{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        backdrop-filter: blur(25px);
         padding: 0;
+        backdrop-filter: blur(25px);
         margin: 0px;
         line-height: 50px;
     }
@@ -189,6 +190,7 @@ a{
 main{
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
     padding-bottom: 50px;
 }
@@ -198,7 +200,7 @@ main{
 .formhld{
     width: 90%;
     max-width: 1080px;
-    margin-top: 25px;
+    padding-top: 75px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -209,12 +211,19 @@ main{
 
 .adtext{
     width: 50%;
-    text-align: justify;
+}
+
+.adtext h1{
+    font-size: 35px;
+    text-align: center;
+    padding-right: 25px;
+    padding-bottom: 10px;
 }
 
 .adtext p{
-    font-size: 17px;
+    font-size: 16.5px;
     padding-right: 25px;
+    text-align: justify;
 }
 
 .form{
@@ -308,6 +317,11 @@ input[type=button]:hover{
     .adtext{
         margin-bottom: 25px;
         width: 100%;
+    }
+
+    .adtext h1{
+        font-size: 32px;
+        padding-right: 0px;
     }
 
     .adtext p{
