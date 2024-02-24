@@ -157,7 +157,7 @@ a{
         z-index: 10;
         width: 150px;
         border-radius: 15px;
-        background-color: rgba(45, 45, 45, 0.8);
+        background: linear-gradient(to bottom right, rgba(50, 50, 50, 0.8), rgba(40, 40, 40, 0.9));
         height: 0px;
         right: 0;
         margin-top: 50px;
@@ -166,7 +166,7 @@ a{
     }
 
     #check:checked ~ .links{
-        height: 160px;
+        height: 150px;
     }
 
     .links a{
