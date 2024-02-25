@@ -16,12 +16,26 @@ body{
     background-size: cover;
     background-position: center;
     background-color: #141414;
+    overflow-x: hidden;
     height: 200vh;
 }
 
 a{
     color: white;
     text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: none;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50px;
 }
 
 /*Quote Section Start*/
