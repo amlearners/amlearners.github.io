@@ -102,21 +102,40 @@ body::-webkit-scrollbar-thumb {
 .links a{
     display: inline-flex;
     line-height: 40px; 
-    margin: 0 15px;
+    margin: 0 10px;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.5);
     transition-duration: 0.35s;
     font-size: 15px;
     cursor: pointer;
 }
 
-.links a:hover{
-    color: rgba(255, 255, 255, 1);
-    transition-duration: 0.35s
+.home,.tp,.pp,.st,.ta,.ab{
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.home,.ta,.ab{
+.links a:hover{
+    color: rgba(255, 255, 255, 1);
+    transition-duration: 0.25s
+}
+
+.home,.tp,.pp,.st,.ta,.ab{
     position: relative;
+}
+
+.home:before,.tp:before,.pp:before,.st:before,.ta:before,.ab:before{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: lime;
+    transition: transform 0.25s ease-in-out;
+    border-radius: 15px;
+}
+
+.home:hover:before,.tp:hover:before,.pp:hover:before,.st:hover:before,.ab:hover:before,.ta:hover:before{
+    transform: scaleX(1);
 }
 
 #check{
@@ -136,7 +155,7 @@ body::-webkit-scrollbar-thumb {
     line-height: 40px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     
     .announcement{
         font-size: 16px;
@@ -169,7 +188,7 @@ body::-webkit-scrollbar-thumb {
     .links{
         position: absolute;
         z-index: 10;
-        width: 150px;
+        width: 200px;
         border-radius: 15px;
         background: linear-gradient(to bottom right, rgba(50, 50, 50, 0.8), rgba(40, 40, 40, 0.9));
         height: 0px;
@@ -180,7 +199,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     #check:checked ~ .links{
-        height: 150px;
+        height: 300px;
     }
 
     .links a{
@@ -194,7 +213,7 @@ body::-webkit-scrollbar-thumb {
         line-height: 50px;
     }
 
-    .home:before,.ta:before,.ab:before{
+    .home:before,.tp:before,.pp:before,.st:before,.ta:before,.ab:before{
         display: none;
     }
 }
