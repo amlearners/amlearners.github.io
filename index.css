@@ -225,7 +225,15 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding-bottom: 50px;
+}
+
+.maindivs{
+    width: 90%;
+    max-width: 1080px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /*Form Start*/
@@ -249,8 +257,8 @@ main{
 .adtext h1{
     font-size: 35px;
     text-align: center;
-    padding-right: 25px;
-    padding-bottom: 10px;
+    margin-right: 25px;
+    margin-bottom: 10px;
 }
 
 .adtext p{
@@ -392,3 +400,71 @@ input[type=button]:hover{
 }
 
 /*Form Finish*/
+
+.holder{
+    width: 100%;
+    max-width: 1080px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardholder{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.past, .topic{
+    padding-top: 75px;
+}
+
+.cards{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: rgba(10, 10, 10, 0.75);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(0, 200, 200);
+    margin: 10px;
+    transition: 0.2s;
+    cursor: default;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.heading{
+    position: absolute;
+    height: 38px;
+    font-size: 30px;
+    top: 30px;
+}
+
+.subs{
+    margin-top: 50px;
+    text-align: center;
+}
+
+
+.subs p{
+    margin: 10px 0;
+}
+
+.subs p a{
+    font-size: 20px;
+}
