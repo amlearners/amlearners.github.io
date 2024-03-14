@@ -4,12 +4,17 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+@font-face{
+    font-family: nidsans;
+    src: url('fonts/nidsans-webfont.ttf')
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body{
-    background-image: url('images/background.jpg');
+    background-image: url('images/');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -46,6 +51,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    color: white;
 }
 
 .announcement p{
@@ -54,7 +60,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hl{
-    color: rgb(90, 10, 255);
+    color: aqua;
 }
 
 /*Quote Section Finish*/
@@ -107,7 +113,7 @@ body::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 
-.home,.tp,.pp,.st,.ta,.ab{
+.home,.tp,.pp,.ta,.ab{
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -116,11 +122,11 @@ body::-webkit-scrollbar-thumb {
     transition-duration: 0.25s
 }
 
-.home,.tp,.pp,.st,.ta,.ab{
+.home,.tp,.pp,.ta,.ab{
     position: relative;
 }
 
-.home:before,.tp:before,.pp:before,.st:before,.ta:before,.ab:before{
+.home:before,.tp:before,.pp:before,.ta:before,.ab:before{
     content: "";
     position: absolute;
     bottom: 10px;
@@ -132,7 +138,7 @@ body::-webkit-scrollbar-thumb {
     border-radius: 15px;
 }
 
-.home:hover:before,.tp:hover:before,.pp:hover:before,.st:hover:before,.ab:hover:before,.ta:hover:before{
+.home:hover:before,.tp:hover:before,.pp:hover:before,.ab:hover:before,.ta:hover:before{
     transform: scaleX(1);
 }
 
@@ -153,7 +159,7 @@ body::-webkit-scrollbar-thumb {
     line-height: 40px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     
     .announcement{
         font-size: 16px;
@@ -197,7 +203,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     #check:checked ~ .links{
-        height: 300px;
+        height: 250px;
     }
 
     .links a{
@@ -211,7 +217,7 @@ body::-webkit-scrollbar-thumb {
         line-height: 50px;
     }
 
-    .home:before,.tp:before,.pp:before,.st:before,.ta:before,.ab:before{
+    .home:before,.tp:before,.pp:before,.ta:before,.ab:before{
         display: none;
     }
 }
@@ -257,12 +263,14 @@ main{
     text-align: center;
     margin-right: 25px;
     margin-bottom: 10px;
+    color: white;
 }
 
 .adtext p{
     font-size: 16.5px;
     padding-right: 25px;
     text-align: justify;
+    color: white;
 }
 
 .form{
@@ -405,7 +413,7 @@ input[type=button]:hover{
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
 }
 
 .cardholder{
