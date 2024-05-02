@@ -58,6 +58,9 @@ body::-webkit-scrollbar-thumb {
     cursor: default;
     display: inline;
 }
+.phoneno{
+    font-size: 14px;
+}
 
 .hl{
     color: aqua;
@@ -160,6 +163,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 768px) {
+
+    .phoneno{
+        font-size: 13px;
+    }
     
     .announcement{
         font-size: 16px;
@@ -392,6 +399,15 @@ input[type=button]:hover{
 }
 
 @media (max-width: 450px) {
+
+    .announcement{
+        font-size: 15px;
+    }
+
+    .phoneno{
+        font-size: 12px;
+    }
+
     .form{
         height: 450px;
         padding: 40px;
