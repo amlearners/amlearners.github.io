@@ -21,7 +21,7 @@ body{
     background-position: center;
     background-color: #141414;
     overflow-x: hidden;
-    height: 200vh;
+    height: 300vh;
 }
 
 a{
@@ -280,6 +280,10 @@ main{
     color: white;
 }
 
+.biased{
+    color: rgb(255, 30, 30);
+}
+
 .form{
     height: 450px; 
     background: rgba(10, 10, 10, 0.75);
@@ -375,7 +379,7 @@ input[type=button]:hover{
 
     .adtext h1{
         font-size: 32px;
-        padding-right: 0px;
+        margin-right: 0px;
     }
 
     .adtext p{
@@ -412,6 +416,11 @@ input[type=button]:hover{
         height: 450px;
         padding: 40px;
     }
+
+    .formh{
+        top: 25px;
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 420px) {
@@ -421,7 +430,28 @@ input[type=button]:hover{
     }
 }
 
+@media (max-width: 370px) {
+
+    .announcement{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .announcement{
+        font-size: 13px;
+    }
+
+    .phoneno{
+        font-size: 11px;
+    }
+
+} 
+
 /*Form Finish*/
+/*TPs & PPs Start*/
 
 .holder{
     width: 100%;
@@ -429,7 +459,7 @@ input[type=button]:hover{
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .cardholder{
@@ -490,3 +520,75 @@ input[type=button]:hover{
 .subs p a{
     font-size: 20px;
 }
+
+@media (max-width: 420px) {
+
+    .cards{     
+        width: 300px;
+        height: 300px;
+    }
+
+    .content{
+        padding: 18px;
+    }
+
+    .heading{
+        height: 35px;
+        font-size: 28px;
+    }
+
+    .subs{
+        margin-top: 45px;
+    }
+
+    .subs p a{
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 370px) {
+
+    .cards{     
+        width: 250px;
+        height: 250px;
+    }
+
+    .content{
+        padding: 15px;
+    }
+
+    .heading{
+        height: 30px;
+        font-size: 28px;
+    }
+
+    .subs{
+        margin-top: 35px;
+    }
+
+    .subs p a{
+        font-size: 16px;
+    }
+
+}
+
+/*TPs & PPs Finish*/
+/*About AMC Start*/
+
+.abhld{
+    width: 90%;
+    max-width: 1080px;
+    padding-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.abh{
+    font-size: 35px;
+    color: white;
+}
+
+/*About AMC Finish*/
