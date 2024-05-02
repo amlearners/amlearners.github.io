@@ -21,7 +21,6 @@ body{
     background-position: center;
     background-color: #141414;
     overflow-x: hidden;
-    height: 300vh;
 }
 
 a{
@@ -274,7 +273,7 @@ main{
 }
 
 .adtext p{
-    font-size: 16.5px;
+    font-size: 17px;
     padding-right: 25px;
     text-align: justify;
     color: white;
@@ -581,14 +580,31 @@ input[type=button]:hover{
     max-width: 1080px;
     padding-top: 75px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: white;
+}
+
+.abhld p{
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.abh{
-    font-size: 35px;
-    color: white;
+
+@media (max-width: 420px) {
+
+    .abhld p{
+        font-size: 16px;
+        padding-top: 4px;
+    }
 }
 
 /*About AMC Finish*/
