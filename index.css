@@ -65,6 +65,11 @@ body::-webkit-scrollbar-thumb {
     color: aqua;
 }
 
+.hll{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
 /*Quote Section Finish*/
 /*Navbar Start*/
 
@@ -171,6 +176,10 @@ body::-webkit-scrollbar-thumb {
         font-size: 16px;
     }
 
+    .hll{
+        font-size: 13px;
+    }
+
     .icons{
         display: inline-flex;
         justify-content: center;
@@ -236,7 +245,7 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 50px;
+    padding-bottom: 140px;
 }
 
 .maindivs{
@@ -251,7 +260,7 @@ main{
 .formhld{
     width: 90%;
     max-width: 1080px;
-    padding-top: 75px;
+    padding-top: 80px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -411,6 +420,10 @@ input[type=button]:hover{
         font-size: 12px;
     }
 
+    .hll{
+        font-size: 11px;
+    }
+
     .form{
         height: 450px;
         padding: 40px;
@@ -427,12 +440,20 @@ input[type=button]:hover{
         height: 480px;
         padding: 35px;
     }
+
+    .announcement{
+        font-size: 14px;
+    }
+
+    .hll{
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 370px) {
 
     .announcement{
-        font-size: 14px;
+        font-size: 13.25px;
     }
 
 }
@@ -440,7 +461,7 @@ input[type=button]:hover{
 @media (max-width: 350px) {
 
     .announcement{
-        font-size: 13px;
+        font-size: 12.8px;
     }
 
     .phoneno{
@@ -605,6 +626,17 @@ input[type=button]:hover{
     .abhld p{
         font-size: 16px;
         padding-top: 4px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    .about h1{
+        font-size: 27px;
+    }
+
+    .presc h2{
+        font-size: 21px;
     }
 }
 
