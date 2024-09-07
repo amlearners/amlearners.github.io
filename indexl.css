@@ -75,7 +75,7 @@ body::-webkit-scrollbar-thumb {
 /*Navbar Start*/
 
 .navbar{
-    background: linear-gradient(to left, rgba(65, 57, 174, 0.9), rgba(60, 50, 160, 1));
+    background: linear-gradient(to right, rgba(65, 57, 174, 0.9), rgba(60, 50, 160, 1));
     height: 40px;
     max-width: 1070px;
     width: 90%;
