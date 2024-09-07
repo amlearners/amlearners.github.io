@@ -157,7 +157,7 @@ body::-webkit-scrollbar-thumb {
 .icons{
     position: absolute;
     font-size: 30px;
-    color: black;
+    color: white;
     background-color: rgba(60, 50, 180, 0.7);
     cursor: pointer;
     display: none;
